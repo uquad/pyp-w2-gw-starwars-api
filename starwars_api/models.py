@@ -101,7 +101,6 @@ class BaseQuerySet(object):
                     self.objects=self._getNextPage()
                 except SWAPIClientError:
                     raise StopIteration
-                print self.page_element_to_get+1,len(self.objects) 
                 
             else:
                 raise StopIteration
