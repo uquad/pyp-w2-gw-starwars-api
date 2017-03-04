@@ -95,7 +95,7 @@ class BaseQuerySet(object):
 
                 self.current_page_count+=1
                 self.page_element_to_get=0
-                self.objects=
+
                 #if you get error while trying to access next page raise error
                 try:
                     self.objects=self._getNextPage()
@@ -132,6 +132,7 @@ class BaseQuerySet(object):
         self._nextpage=obj['next']
         self._count=obj['count']
         
+
         return obj['results']
     
 
